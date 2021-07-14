@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  db:
+    container_name: mysql_dev
+    image: mysql:latest
+    ports:
+      - 13306:3306 # 13306 -> 3306
+    volumes:
+      - ./mysql_config/conf.d:/etc/mysql/conf.d #mysql 인코딩, 기본시간대 설정
+      - ./mysql_config/data:/var/lib/mysql #DB 데이터가 파일형태로 저장되어 있음
+      - ./mysql_config/initdb.d:/docker-entrypoint-initdb.d # 컨테이너 최초 실행 시 실행될 스크립트. 주로 테이블 생성과 같은 스크립트가 들어감.
+    env_file: ./mysql_config/.env #DB 계정정보 설정
+    environment:
+      TZ: Asia/Seoul
+    networks:
+      - backend
+    restart: always
+
+networks:
+  backend:
