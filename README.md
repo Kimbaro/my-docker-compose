@@ -9,3 +9,6 @@ Server: Docker Engine - Community
 
 # docker composed
 docker composed config 파일 보고 버전 맞출것
+
+우분투 환경에 docker-compose 파일 서비스 생성 및 데몬등록
+https://multicloud.tistory.com/m/62
