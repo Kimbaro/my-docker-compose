@@ -2,22 +2,15 @@
   "development": {
     "username": "kimbaro",
     "password": "kimbaro!",
-    "database": "nodebird",
+    "database": "dev_db",
     "host": "127.0.0.1",
     "port": "13306",
-    "dialect": "mariadb"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "react-nodebird",
-    "host": "127.0.0.1",
     "dialect": "mariadb"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "react-nodebird",
+    "database": "dev_db",
     "host": "127.0.0.1",
     "dialect": "mariadb"
   }

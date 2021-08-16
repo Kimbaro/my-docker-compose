@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<p>원격탈진포트 제어 : <%= port_control == true ? "사용" : "미사용" %></p>
+<p>원격탈진포트 감시 : <%= port_monitoring == true ? "사용" : "미사용" %></p>
+<p>탈진 제어 : <%= type_control == true ? "챔버탈진" : "전체탈진" %></p>
+<p>탈진 감시 :<%= type_monitoring == true ? "챔버탈진" : "전체탈진" %></p>
+<p>idle 옵션 : <%= idle_option == true ? "항시가동" : "없음" %></p>
+<p>idle 시간 : <%= idle_seconds %></p>
+<p>탈진정지 옵션 : <%= stop_option == true ? "항시가동" : "없음" %></p>
+<p>탈진정지 시간 : <%= stop_seconds %> </p>
+<p>챔버개수 : <%= chambers %></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<table>
+    <% for(let chamber of chambers){ %>
+        <tr>
+            <td><%= chamber.id == 0 ? "전체" : chamber.id %></td>
+            <td><%= chamber.mode == true ? "자동" : "수동" %></td>
+            <td><%=
+                    chamber.status == 1 ? "가동중" :
+                            chamber.status == 2 ? "가동대기" :
+                                    chamber.status == 3 ? "정지중" :
+                                            chamber.status == 4 ? "정지" : null %></td>
+            <td><%= chamber.control == true ? "제어" : "정지" %></td>
+        </tr>
+    <% } %>
+</table>
+</body>
+</html>
